@@ -9,12 +9,44 @@ namespace Fisiotherapp.PaginasCSharp
     {
         public TelaInicio2()
         {
-            StackLayout stackPrincipal = new StackLayout { Orientation = StackOrientation.Vertical,HorizontalOptions=LayoutOptions.Center,VerticalOptions=LayoutOptions.Center};
-            var button = new Button { Text = "Ola mundo", WidthRequest = 300 ,BackgroundColor=Color.Green};
+            
+            Image imagem = new Image { Source = "pessoaFisioterapia.png",HorizontalOptions=LayoutOptions.Center,VerticalOptions=LayoutOptions.Center};
 
-            stackPrincipal.Children.Add(button);
+            Label lblNome = new Label {Text="Olá, !" ,FontSize = 30,HorizontalTextAlignment=TextAlignment.Center, Margin = new Thickness(0, 0, 0, 40) };
+            Label lblTexto = new Label { Text="Vamos iniciar o seu tratamento",FontSize = 30,HorizontalTextAlignment=TextAlignment.Center,
+            Margin = new Thickness(0, 0, 0, 40)};
+
+            Button botao = new Button { Text = "Iniciar Tratamento", BackgroundColor = Color.Purple,TextColor=Color.White,FontSize=14,
+            HorizontalOptions=LayoutOptions.Center,VerticalOptions=LayoutOptions.Center,WidthRequest=250,CornerRadius=10};
+
+            botao.Clicked += OnButtonClicked;
+
+
+            StackLayout stackLabel = new StackLayout
+            {
+                Children =
+                {
+                    lblNome,
+                    lblTexto
+                }
+            };
+            StackLayout stackPrincipal = new StackLayout
+            {
+                Padding = 30,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                Children = {
+                    imagem,
+                    stackLabel,
+                    botao
+                }
+            };
             Content = stackPrincipal;
+        }
 
+        private void OnButtonClicked(Object sender,EventArgs args)
+        {
+            App.Current.MainPage = new NavigationPage(new TelaTreinar2());
         }
     }
 }
