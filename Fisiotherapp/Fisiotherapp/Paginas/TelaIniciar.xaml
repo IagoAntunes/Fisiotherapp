@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fisiotherapp.Paginas.TelaIniciar">
+    
+    <StackLayout Padding="30" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+        <Image Source="pessoaFisioterapia.png"/>
+
+        <StackLayout>
+            <Label Text="" TextColor="Black" FontSize="42" x:Name="lblNome" 
+                           HorizontalTextAlignment="Center" Margin="0,0,0,40" FontFamily="Lobster-Regular"/>
+            <Label Text="Vamos Iniciar o seu tratamento? :)" TextColor="Black" FontSize="30"
+                        HorizontalTextAlignment="Center"  Margin="0,0,0,40"/>
+        </StackLayout>
+
+
+        <Button Text="Iniciar tratamento" BackgroundColor="#5B3FFF" TextColor="White" FontSize="Small"
+                HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="250" Clicked="goTratamento"
+                CornerRadius="10"/>
+    </StackLayout>
+</ContentPage>

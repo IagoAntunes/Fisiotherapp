@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fisiotherapp.Views.TratamentoView">
+
+    <StackLayout  Padding="30" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Spacing="0">
+        <StackLayout HeightRequest="450">
+            <Image Source="maoFisioterapia" />
+            <Label Text="Fechar e abrir as mãos" FontSize="30" TextColor="Black" HorizontalTextAlignment="Center"/>
+            <Button Text="Feito!" BackgroundColor="#5B3EFF" TextColor="White" FontSize="Small"
+                HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="250" CornerRadius="10"
+               />
+        </StackLayout>
+        <Grid HeightRequest="250">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label  Text="Séries" FontSize="25" HorizontalTextAlignment="Center"/>
+                <Label  Text="--" FontSize="22" HorizontalTextAlignment="Center" TextColor="#9E2D8C" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label  Text="Repetições" FontSize="25" HorizontalTextAlignment="Center"/>
+                <Label  Text="10" FontSize="22" HorizontalTextAlignment="Center" TextColor="#9E2D8C" FontAttributes="Bold" x:Name="lblRepeticoes"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label  Text="Descanso" FontSize="25" HorizontalTextAlignment="Center"/>
+                <Label  Text="20Seg" FontSize="22" HorizontalTextAlignment="Center" TextColor="#9E2D8C" FontAttributes="Bold" x:Name="lblDescanso"/>
+            </StackLayout>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

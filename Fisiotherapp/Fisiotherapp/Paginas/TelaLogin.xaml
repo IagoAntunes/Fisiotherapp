@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fisiotherapp.Paginas.TelaLogin">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Bem Vindo! ! !" TextColor="Black" FontSize="36" HorizontalOptions="Center" Margin="0,80,0,0"/>
+
+            <Image Source="Astronauta"/>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Label Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Entry Placeholder="Digite seu Nome..." WidthRequest="300" x:Name="entryNome"/>
+                <Button Text="Enviar" BackgroundColor="#5B3FFF" TextColor="White" CornerRadius="40" Clicked="GoTelaIncio"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
