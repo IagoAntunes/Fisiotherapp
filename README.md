@@ -38,9 +38,9 @@
 ---
 
 ## 🎨 Layout
-
 O layout da aplicação está disponível no Figma:
-
+    <img src="https://github.com/IagoAntunes/Fisiotherapp/blob/master/Fisiotherapp/Fisiotherapp.Android/Resources/drawable/Fisio.png" alt="Logo">
+  </a>
 
 
 ## 🛠 Tecnologias
